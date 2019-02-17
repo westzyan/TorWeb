@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+
+
+<struts>
+	<!-- 定义逻辑视图与物理视图之间的联系 -->
+	<package name="tor" extends="struts-default" namespace="/">
+		<action name="index" class="com.tor.action.Test" method="execute"> <!-- 将index映射到物理地址 class="com.struts.trio.HelloStrutsAction" -->
+			<result name="success">/torIndex.html</result>
+		</action>
+
+		<action name="listAllTraffic" class="com.tor.action.IdentityAction" method="getTrafficPage"> <!-- 将index映射到物理地址 class="com.struts.trio.HelloStrutsAction" -->
+			<result name="success">/StudentInfo.jsp</result>
+		</action>
+	</package>
+	<!-- end -->
+
+</struts>
